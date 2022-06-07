@@ -1,12 +1,12 @@
 public class Employee {
 
-    public Employee(String name, int department, double salary) {
-    id = counter++;
-    this.name = name;
-    this.department = department;
-    this.salary = salary;
+    private String name;
+    private int department;
+    private double salary;
+    private int id;
+    public static int counter = 1;
 
-}
+
     public void setName(String name) {
         this.name = name;
     }
@@ -44,13 +44,12 @@ public class Employee {
         return this.id + "." + " ФИО: " + this.name + "," + " ЗП " + this.salary + "," + " Отдел " + this.department;
     }
 
-    private String name;
-   private int department;
-   private double salary;
-   private int id;
-   public static int counter = 1;
+    public Employee(String name, int department, double salary) {
+        id = counter++;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
 
-
-
+    }
 
 }
