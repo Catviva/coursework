@@ -1,4 +1,12 @@
 public class Employee {
+
+    public Employee(String name, int department, double salary) {
+    id = counter++;
+    this.name = name;
+    this.department = department;
+    this.salary = salary;
+
+}
     public void setName(String name) {
         this.name = name;
     }
@@ -42,13 +50,7 @@ public class Employee {
    private int id;
    public static int counter = 1;
 
-    public Employee(String name, int department, double salary) {
-        id = counter++;
-        this.name = name;
-        this.department = department;
-        this.salary = salary;
 
-    }
 
 
 }

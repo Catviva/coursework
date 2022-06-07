@@ -14,14 +14,13 @@ public class Main {
         list[7] = new Employee("Искандеров Артем Рамилевич", 5, 190_000);
         list[8] = new Employee("Самойлов Даниил Алексеевич", 2, 130_000);
         list[9] = new Employee("Морозова Наталья Сергеевна", 4, 205_000);
-        for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i]);
-        }
+
+        printAllEmploeeys();
+
 
         double totalSalary = totalSalary();
-        {
-            System.out.println("Зарплата всех сотрудников составляет в месяц: " + totalSalary);
-        }
+        System.out.println("Зарплата всех сотрудников составляет в месяц: " + totalSalary);
+
 
         Employee minSalary = findMinSalary();
         System.out.println("Минимальная зарплата сотрудника: " + minSalary);
@@ -29,11 +28,22 @@ public class Main {
         Employee maxSalary = findMaxSalary();
         System.out.println("Максимальная зарплата сотрудника: " + maxSalary);
 
-        double averageSalary = totalSalary / list.length;
+        double averageSalary = totalSalary();
         System.out.println("Средняя зарплата за месяц составила " + averageSalary + " рублей");
 
         printEmploeeysName();
 
+    }
+
+    private static double averageSalary () {
+         return totalSalary() / list.length;
+
+    }
+    private static void printAllEmploeeys() {
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
+            
+        }
     }
 
     private static double totalSalary() {
